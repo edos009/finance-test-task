@@ -1,0 +1,36 @@
+@import "../../common/styles/colors";
+@import "../../common/styles/template";
+
+.block {
+  margin-top: 20px;
+  .container {
+    @extend %container;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+
+      max-width: 600px;
+      width: 100%;
+
+      margin: 0 auto;
+
+      .title {
+        padding: 10px 0;
+        border-bottom: 1px solid $color-light-grey;
+
+        color: $color-grey;
+
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.2em;
+
+        text-transform: capitalize;
+
+        @media (max-width: 420px) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
