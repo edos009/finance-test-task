@@ -3,18 +3,21 @@ import io from "socket.io-client";
 import { useDispatch } from "react-redux";
 
 import { updateTickers } from "../reducers/tickersReducers";
+import CONSTANTS from "../constants";
+
+const {BASE_URL, SOCKET_EVENTS} = CONSTANTS;
 
 const useSocketConnection = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const socket = io("http://localhost:4000");
+    const socket = io(BASE_URL);
 
     socket.on("connect", () => {
-      socket.emit("start");
+      socket.emit(SOCKET_EVENTS.START);
     });
 
-    socket.on("ticker", (tickers) => {
+    socket.on(SOCKET_EVENTS.TICKER, (tickers) => {
       dispatch(updateTickers({ tickers }));
     });
     // eslint-disable-next-line
