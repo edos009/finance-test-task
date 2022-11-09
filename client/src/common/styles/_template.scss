@@ -1,0 +1,25 @@
+@import "./colors";
+
+%container {
+  max-width: 1230px;
+  width: 100%;
+
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+%change_up_cl {
+  color: $color-dark-green;
+}
+
+%change_down_cl {
+  color: $color-dark-red;
+}
+
+%change_up_bg {
+  background-color: $color-light-green;
+}
+
+%change_down_bg {
+  background-color: $color-light-red;
+}

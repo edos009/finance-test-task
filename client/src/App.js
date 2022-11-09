@@ -1,10 +1,11 @@
 import React from 'react';
-import TickersTable from './components/TickersTable';
+
+import Tickers from './components/Tickers';
 
 const App = () => {
   return (
     <>
-      <TickersTable/>
+      <Tickers/>
     </>
   );
 }
