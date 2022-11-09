@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import rootReducer from "../reducers/rootReducer";
+import tickersReducers from "reducers/tickersReducers";
 
 const store = configureStore({
-  reducer: rootReducer,
+  reducer: {
+    tickers: tickersReducers,
+  },
 });
 
 export default store;

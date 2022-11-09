@@ -1,13 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import Tickers from './components/Tickers';
+import Tickers from "./components/Tickers";
 
 const App = () => {
-  return (
-    <>
-      <Tickers/>
-    </>
-  );
-}
+  return <Tickers />;
+};
 
 export default App;
