@@ -1,7 +1,12 @@
-import React from "react";
+import React from 'react';
+import TickersTable from './components/TickersTable';
 
 const App = () => {
-  return <></>;
-};
+  return (
+    <>
+      <TickersTable/>
+    </>
+  );
+}
 
 export default App;
